@@ -36,13 +36,13 @@ export default function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" sideOffset={8}>
                 <DropdownMenuItem asChild>
-                  <Link to="/projects/ideate-nigeria-youth-enterprise-challenge">Ideate Nigeria Youth Enterprise Challenge</Link>
+                  <Link to="/projects#ideate">Ideate Nigeria Youth Enterprise Challenge</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/projects/youth-ideas-challenge">Youth Ideas Challenge</Link>
+                  <Link to="/projects#youth-ideas">Youth Ideas Challenge</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/projects/ezumezu-podcast">Ezumezu: The Podcast</Link>
+                  <Link to="/projects#ezumezu">Ezumezu: The Podcast</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -55,13 +55,13 @@ export default function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" sideOffset={8}>
                 <DropdownMenuItem asChild>
-                  <Link to="/about">About</Link>
+                  <Link to="/community#about">About</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/programs/register">Register for a Program</Link>
+                  <Link to="/community#register">Register for a Program</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/member-volunteer">Become a Member/Volunteer</Link>
+                  <Link to="/community#member">Become a Member/Volunteer</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -94,7 +94,7 @@ export default function Header() {
             <NavLink to="/contact" label="Contact" />
 
             <Button asChild variant="hero" className="ml-2">
-              <Link to="/programs/register">Register</Link>
+              <Link to="/community#register">Register</Link>
             </Button>
           </nav>
 
@@ -110,17 +110,17 @@ export default function Header() {
               <details>
                 <summary className="px-3 py-2 cursor-pointer">Projects</summary>
                 <div className="grid">
-                  <Link to="/projects/ideate-nigeria-youth-enterprise-challenge" className="px-6 py-2">Ideate Nigeria Youth Enterprise Challenge</Link>
-                  <Link to="/projects/youth-ideas-challenge" className="px-6 py-2">Youth Ideas Challenge</Link>
-                  <Link to="/projects/ezumezu-podcast" className="px-6 py-2">Ezumezu: The Podcast</Link>
+                  <Link to="/projects#ideate" className="px-6 py-2">Ideate Nigeria Youth Enterprise Challenge</Link>
+                  <Link to="/projects#youth-ideas" className="px-6 py-2">Youth Ideas Challenge</Link>
+                  <Link to="/projects#ezumezu" className="px-6 py-2">Ezumezu: The Podcast</Link>
                 </div>
               </details>
               <details>
                 <summary className="px-3 py-2 cursor-pointer">Community</summary>
                 <div className="grid">
-                  <Link to="/about" className="px-6 py-2">About</Link>
-                  <Link to="/programs/register" className="px-6 py-2">Register for a Program</Link>
-                  <Link to="/member-volunteer" className="px-6 py-2">Become a Member/Volunteer</Link>
+                  <Link to="/community#about" className="px-6 py-2">About</Link>
+                  <Link to="/community#register" className="px-6 py-2">Register for a Program</Link>
+                  <Link to="/community#member" className="px-6 py-2">Become a Member/Volunteer</Link>
                 </div>
               </details>
               <details>

@@ -1,7 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Rocket, Users, Mic, ImageIcon } from "lucide-react";
+import { Rocket, Users, Mic } from "lucide-react";
+import hero from "@/assets/hero-umyidi.jpg";
+import g1 from "@/assets/gallery-1.jpg";
+import g2 from "@/assets/gallery-2.jpg";
+import g3 from "@/assets/gallery-3.jpg";
+import g4 from "@/assets/gallery-4.jpg";
 
 const Index = () => {
   return (
@@ -24,20 +29,16 @@ const Index = () => {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild variant="hero" size="lg">
-                <Link to="/programs/register">Register for Programs</Link>
+                <Link to="/community#register">Register for Programs</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/member-volunteer">Become a Member</Link>
+                <Link to="/community#member">Become a Member</Link>
               </Button>
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-video rounded-xl border bg-card shadow-[var(--shadow-elevated)]" aria-label="Hero media placeholder">
-              <div className="h-full w-full grid place-items-center text-muted-foreground">
-                <span className="inline-flex items-center gap-2 text-sm">
-                  <ImageIcon className="opacity-70" /> Add your hero video or image here
-                </span>
-              </div>
+            <div className="aspect-video overflow-hidden rounded-xl border bg-card shadow-[var(--shadow-elevated)]">
+              <img src={hero} alt="UMYIDI youth collaborating in a bright community space" className="h-full w-full object-cover" loading="eager" />
             </div>
             <p className="mt-2 text-sm text-muted-foreground">Empowering youth through skills, mentorship, and community.</p>
           </div>
@@ -83,10 +84,9 @@ const Index = () => {
           <div className="mx-auto max-w-6xl px-4">
             <h2 className="text-2xl md:text-3xl font-semibold">Gallery</h2>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {Array.from({ length: 8 }).map((_, i) => (
+              {[g1, g2, g3, g4, g1, g2, g3, g4].map((src, i) => (
                 <figure key={i} className="relative aspect-square overflow-hidden rounded-lg border bg-card shadow-sm">
-                  <div className="absolute inset-0 bg-[radial-gradient(100%_100%_at_30%_20%,hsl(var(--primary)/0.15),transparent_70%)]" aria-hidden="true" />
-                  <div className="h-full w-full grid place-items-center text-xs text-muted-foreground">Add image</div>
+                  <img src={src} alt={`UMYIDI gallery ${i + 1}`} className="h-full w-full object-cover" loading="lazy" />
                 </figure>
               ))}
             </div>
